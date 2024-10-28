@@ -60,11 +60,11 @@ To use the `tensile_config_generator.py` script, follow these steps:
    MI308:
    For cpx, use the gfx942_20cu folder; for spx, use the gfx942_80cu folder.
    ```
-   python3 ./tensilelite/Tensile/Utilities/merge.py --no_eff library/src/amd_detail/rocblaslt/src/Tensile/Logic/asm_full/aquavanjaram/{gfx942_20cu|gfx942_80cu}/Equality/ <tune result directory> library/src/amd_detail/rocblaslt/src/Tensile/Logic/asm_full/aquavanjaram/{gfx942_20cu|gfx942_80cu}/Equality/
+   python3 ./tensilelite/Tensile/Utilities/merge.py --no_eff library/src/amd_detail/rocblaslt/src/Tensile/Logic/asm_full/aquavanjaram/{gfx942_20cu|gfx942_80cu}/{Equality|GridBased}/ <tune result directory> library/src/amd_detail/rocblaslt/src/Tensile/Logic/asm_full/aquavanjaram/{gfx942_20cu|gfx942_80cu}/{Equality|GridBased}/
    ```
    MI210:
    ```
-   python3 ./tensilelite/Tensile/Utilities/merge.py --no_eff library/src/amd_detail/rocblaslt/src/Tensile/Logic/asm_full/aldebaran/104CU/Equality/ <tune result directory> library/src/amd_detail/rocblaslt/src/Tensile/Logic/asm_full/aldebaran/104CU/Equality/
+   python3 ./tensilelite/Tensile/Utilities/merge.py --no_eff library/src/amd_detail/rocblaslt/src/Tensile/Logic/asm_full/aldebaran/104CU/{Equality|GridBased}/ <tune result directory> library/src/amd_detail/rocblaslt/src/Tensile/Logic/asm_full/aldebaran/104CU/{Equality|Gridbase}/
    ```
 
 6. Rebuild hipBLASLt with the merged results:
