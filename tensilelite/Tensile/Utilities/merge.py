@@ -403,6 +403,9 @@ def avoidRegressions(originalDir, incrementalDir, outputPath, forceMerge, trimSi
     incrementalFiles = [ i for i in incrementalFiles
                          if os.path.split(i)[-1] in [os.path.split(o)[-1] for o in originalFiles] ]
 
+    if not incrementalFiles:
+        raise RuntimeError(f"Can't get corresponding base file for {incrementalDir}, please create a new config.")
+
     for incFile in incrementalFiles:
         basename = os.path.split(incFile)[-1]
         origFile = os.path.join(originalDir, basename)
