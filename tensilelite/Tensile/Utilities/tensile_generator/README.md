@@ -38,12 +38,12 @@ To use the `tensile_config_generator.py` script, follow these steps:
 
    Equality tuning example:
    ```
-   python ./tensile_config_generator.py --hipblaslt_log ./hipblaslt_gemm_log_example.txt --tensile_config ./tuning_equality_template.yaml --gpus 4 --iters 100
+   python ./tensile_config_generator.py --hipblaslt_log ./hipblaslt_gemm_log_example.txt --tensile_config ./tuning_template.yaml --gpus 4 --iters 100
    ```
 
    Gridbase tuning example:
    ```
-   python ./tensile_config_generator.py --gridbase_config ./gridbase_config_template.yaml --tensile_config ./tuning_gridbase_template.yaml --gpus 4 --iters 100
+   python ./tensile_config_generator.py --gridbase_config ./gridbase_config_template.yaml --tensile_config ./tuning_template.yaml --gpus 4 --iters 100
    ```
 
 3. Install hipBLASLt and Tensile (change the path to the hipBLASLt repo):
